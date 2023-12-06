@@ -1,0 +1,10 @@
+#skills{
+    margin-top: 7rem;
+    height: 60vh;
+    /* border: solid 1px; */
+}
+
+#skills h2{
+    font-size: 3rem;
+    margin-top: 0;
+}
