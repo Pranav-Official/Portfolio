@@ -2,9 +2,35 @@
     margin-top: 7rem;
     height: 60vh;
     /* border: solid 1px; */
+    margin-bottom: 7rem;
 }
 
 #skills h2{
     font-size: 3rem;
     margin-top: 0;
 }
+
+.skill-cards{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 35px;
+}
+
+
+.skill-card{
+    border: solid 3px;
+    padding-left: 20px;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.skill-card p{
+   margin: 0;
+}
+
+.progress-bar{
+    border: solid 3px;
+    height: 20px;
+}
+
