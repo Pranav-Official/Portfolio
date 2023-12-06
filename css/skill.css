@@ -51,7 +51,22 @@
     transform: translate(-15px, -15px);
     box-shadow: 15px 15px 0px 0px rgba(0,0,0,1);
     #web{
+        width:200px
+    }
+    #js{
+        width:150px
+    }
+    #py{
         width:250px
+    }
+    #linux{
+        width:250px
+    }
+    #cpp{
+        width:200px
+    }
+    #ds{
+        width:350px
     }
 
 }
