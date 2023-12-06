@@ -1,0 +1,22 @@
+#projects{
+    margin-top: 7rem;
+    height: 60vh;
+    border: solid 1px;
+}
+
+#projects h2{
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.project-cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Project-cards{
+    height: 22rem;
+    width: 19rem;
+    border: solid 3px;
+}
