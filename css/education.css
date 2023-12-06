@@ -1,0 +1,64 @@
+#education{
+    height: 70vh;
+    /* border: solid 1px; */
+}
+
+#education h2{
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.education-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.education{
+    border: solid 3px;
+    width: 100%;
+    height: 150px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    transition: 0.6s;
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+
+    display: flex;
+    flex-direction: row;
+}
+.education p{
+    flex:4;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+
+}
+.education div{
+    flex:0.02;
+    background-color: black;
+
+    
+}
+
+.education:hover{
+    background-color: #c3f73a;
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+}
+
+#contact{
+    height: 70vh;
+}
+
+#contact h2{
+    font-size: 3rem;
+    margin-top: 0;
+}

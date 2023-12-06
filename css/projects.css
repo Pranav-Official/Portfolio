@@ -1,5 +1,4 @@
 #projects{
-    margin-top: 7rem;
     height: 60vh;
     /* border: solid 1px; */
 }
@@ -35,6 +34,9 @@
     border: solid 3px;
     margin-left: 22px;
     margin-top: 22px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    
 }
 
 .project-title,.project-description{

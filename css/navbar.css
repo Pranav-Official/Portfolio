@@ -4,18 +4,23 @@
     justify-content: space-between;
     /* border: solid; */
     align-items: center;
-    margin-top: 1rem;
+    position: fixed;
+    background-color: white;
+    z-index: 30;
+    width: 75%;
+    margin-left: -10px;
+    top: 0;
 }
 
 .nav-menu{
     display: flex;
     flex-direction: row;
     gap: 5%;
-    margin-right: 20%;
+    margin-right: 32.5%;
     font-size: 22px;
 }
 
-a{
+.navbar a{
     text-decoration: none;
     color: rgb(10, 10, 10);
     border: solid 3px;
@@ -23,23 +28,31 @@ a{
     transition: 0.6s;
     box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
-a:visited {
+.navbar a:active{
+    background-color: #68b684;
+}
+.navbar a:visited {
     color: rgb(10, 10, 10);
   }
 
-a:hover{
+.navbar a:target {
+
+        background-color: #555;
+}
+
+.navbar a:hover{
     background-color: #c3f73a;
     transform: translate(-7px, -7px);
     box-shadow: 7px 7px 0px 0px rgba(0,0,0,1);
 }
-#github-button{
-    background-color: #c3f73a;
-}
+/* #github-button{
+} */
 
 #github-button:hover{
-    background-color: #68b684;
     -webkit-animation: rotate-center 0.6s ease-in-out both;
 	        animation: rotate-center 0.6s ease-in-out both;
    
 }
+
+
 

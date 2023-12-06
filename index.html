@@ -8,26 +8,92 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/education.css">
     <title>Document</title>
+    <script>
+        
+    </script>
 </head>
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all sections with class 'section'
+            const sections = document.querySelectorAll('section');
+
+            // Function to check if an element is in the viewport
+            function isElementInViewport(elementId) {
+                var element = document.getElementById(elementId);
+
+                if (!element) {
+                 // Element with the given ID not found
+                return false;
+                }
+
+                 var rect = element.getBoundingClientRect();
+
+                return (
+                     rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+            }
+
+            // Function to log the current section in the viewport
+            function logCurrentSection() {
+                console.log("sections :"+ sections[0].ATTRIBUTE_NODE);
+                for (const section of sections) {
+                    if (isElementInViewport(section.id)) {
+                        console.log("sections :"+ section.id);
+                        var a_id = section.id + "-button";
+                        var a_ele = document.getElementById(a_id);
+                        const buttons = document.querySelectorAll('.nav-menu a');
+                        for(const button of buttons){
+                            button.setAttribute("style", "background-color: white;")
+                        }
+                        a_ele.setAttribute("style", "background-color: #c3f73a;");
+                    }
+                    
+                    // if (isInViewport(section)) {
+                    //     console.log(`Current Section: ${section.id}`);
+                    //     var a_id = section.id + "-button";
+                    //     var a_ele = document.getElementById(a_id);
+                    //     console.log(`Current a_id: ${a_id}`);
+                    //     a_ele.setAttribute("style", "background-color: blue;"); 
+                    // }
+                }
+            }
+
+            // Attach the logCurrentSection function to the scroll event
+            document.addEventListener('scroll', logCurrentSection);
+
+            // Log the initial section when the page loads
+            logCurrentSection();
+        });
+    </script>
+
     <div class="navbar">
         <div>
             <img src="img/signature.png" width="100" alt="" srcset="">
         </div>
     
       <div class="nav-menu">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/your-username" id="github-button" target="_blank">GitHub</a>
+        <a id="about-button" href="#about">Home</a>
+        <a id="projects-button" href="#projects">Projects</a>
+        <a  id="skills-button"href="#skills">Skills</a>
+        <a id="education-button" href="#education">Education</a>
+        <a id="contact-button" href="#contact">Contact</a>
+        <a id="github-button" href="https://github.com/Pranav-Official" id="github-button" target="_blank">GitHub</a>
       </div>
     </div>
     
       <section id="about">
+        <div class="section-head"></div>
         <div class="card picture">
-            <div class="frame"></div>
+            <div class="frame">
+                <img src="img/me.png" width="320" alt="" srcset="">
+
+            </div>
 
         </div>
         <div class="card card1">
@@ -57,10 +123,11 @@
       </section>
     
       <section id="projects">
-        <h2>Projects</h2>
+        <h2 class="section-head">Projects</h2>
         <div class="project-cards-container">
             <div class="Project-cards">
                 <div class="project-image">
+                    <img src="img/pokedex.jpeg" width="260" alt="" srcset="">
 
                 </div>
                 <h4 class="project-title">Pokedex Advanced</h4>
@@ -69,6 +136,7 @@
             </div>
             <div class="Project-cards">
                 <div class="project-image">
+                    <img src="img/maze.png" width="350" alt="" srcset="">
 
                 </div>
                 <h4 class="project-title">Maze Visualizer</h4>
@@ -77,6 +145,7 @@
             </div>
             <div class="Project-cards">
                 <div class="project-image">
+                    <img src="img/safe.png" width="350" alt="" srcset="">
 
                 </div>
                 <h4 class="project-title">SafePlace</h4>
@@ -87,7 +156,7 @@
       </section>
     
       <section id="skills">
-        <h2>Skills</h2>
+        <h2 class="section-head">Skills</h2>
         <div class="skill-cards">
             <div class="skill-card">
                 <p>Web development</p>
@@ -135,13 +204,30 @@
       </section>
     
       <section id="education">
-        <h2>Education</h2>
-        <p>This is a placeholder for information about my education.</p>
+        <h2 class="section-head">Education</h2>
+        <div class="education-container">
+            <div class="education">
+                <p class="degree">B.Tech in Computer Science and Engineering</p>
+                <div class="divition-line"></div>
+                <p class="college">College of Engineering Chenganner</p>
+                <div class="divition-line"></div>
+                <p class="duration">2019-2023</p>
+            </div>
+            <div class="education">
+                <p class="degree">12th in PCM + English + Computer Science</p>
+                <div class="divition-line"></div>
+                <p class="college">Bhavan's Vidhya Mandir Kodungallur</p>
+                <div class="divition-line"></div>
+                <p class="duration">2018-2019</p>
+            </div>
+
+        </div>
       </section>
     
       <section id="contact">
-        <h2>Contact</h2>
-        <p>This is a placeholder for contact information.</p>
+        <h2 class="section-head">Contact</h2>
+        <p>Pranav P Prasanth</p>
+        <p>pranav.prasanth@experionglobal.com</p>
       </section>
 </body>
 </html>
